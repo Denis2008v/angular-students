@@ -44,4 +44,12 @@ export class Student {
       present: false
     }
   ];
+
+ getStyle(s: any) {
+    return {
+      'backgroundColor': s.gender == 'F' ? this.F_COLOR : this.M_COLOR,
+      'text-decoration': s.present ? 'none' : 'underline',
+      'font-weight': s.present ? 'normal' : 'bold'
+    };
+  }
 }
